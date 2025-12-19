@@ -71,7 +71,47 @@ export default function Home() {
           possible care with compassion and expertise.
         </p>
       </section>
+      {/* =================== PRODUCTS =================== */}
+      <section className="section section-grey">
+        <h2 className="slide-right">Top Hearing Aid Products</h2>
 
+        <div className="product-logos fade-in">
+          {/* Product 1: Receiver-In-Canal (RIC) */}
+          <div className="product-card">
+            <h4>Receiver-In-Canal (RIC)</h4>
+            <img src="/assets/product/ric.jpg" alt="RIC" />
+            <button className="view-btn">View</button>
+          </div>
+
+          {/* Product 2: In-The-Ear (ITE) */}
+          <div className="product-card">
+            <h4>In-The-Ear (ITE)</h4>
+            <img src="/assets/product/ite.jpg" alt="ITE" />
+            <button className="view-btn">View</button>
+          </div>
+
+          {/* Product 3: Invisible-In-Canal (IIC) */}
+          <div className="product-card">
+            <h4>Invisible-In-Canal (IIC)</h4>
+            <img src="/assets/product/iic.jpg" alt="IIC" />
+            <button className="view-btn">View</button>
+          </div>
+
+          {/* Product 4: Completely-In-Canal (CIC) */}
+          <div className="product-card">
+            <h4>Completely-In-Canal (CIC)</h4>
+            <img src="/assets/product/cic.jpg" alt="CIC" />
+            <button className="view-btn">View</button>
+          </div>
+
+          {/* Product 5: Behind-The-Ear (BTE) */}
+          <div className="product-card">
+            <h4>Behind-The-Ear (BTE)</h4>
+            <img src="/assets/product/bte.jpg" alt="BTE" />
+            <button className="view-btn">View</button>
+          </div>
+        </div>
+      </section>
       {/* =================== SERVICES =================== */}
       <section className="section section-white">
         <h2 className="slide-left">Our Key Services</h2>
@@ -155,9 +195,6 @@ export default function Home() {
         <div className="cta-actions">
           <NavLink to="/contact">
             <button className="btn-primary">Contact Us</button>
-          </NavLink>
-          <NavLink to="/appointment">
-            <button className="btn-outline">Book Appointment</button>
           </NavLink>
         </div>
       </section>

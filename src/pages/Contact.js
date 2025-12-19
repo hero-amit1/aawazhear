@@ -258,12 +258,19 @@ export default function Contact() {
       </section>
 
       {/* MAP */}
-      <section className="contact-map animate-up">
+      <section
+        className="contact-map animate-up"
+        style={{ width: "100%", height: "400px" }}
+      >
         <iframe
-          title="AawAZ Hearing & Speech Care Center"
-          src="https://www.google.com/maps/dir/27.705344,84.4131412/Aawaz+Hearing+and+Speech+care+Center,+Hospital+Rd+10,+Bharatpur+44200/@27.6939849,84.3893104,13z/data=!4m9!4m8!1m1!4e1!1m5!1m1!1s0x3994fbc4ab160d6f:0x3fa4c00f10d335cb!2m2!1d84.4320284!2d27.6810354?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoKLDEwMDc5MjA3M0gBUAM%3D"
+          title="Aawaz Hearing & Speech Care Center"
+          width="100%"
+          height="100%"
+          style={{ border: 0 }}
           loading="lazy"
+          allowFullScreen
           referrerPolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.123456789!2d84.4320284!3d27.6810354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3994fbc4ab160d6f%3A0x3fa4c00f10d335cb!2sAawaz%20Hearing%20and%20Speech%20Care%20Center!5e0!3m2!1sen!2snp!4v1699999999999"
         ></iframe>
       </section>
     </div>
