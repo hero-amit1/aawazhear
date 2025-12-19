@@ -2,13 +2,6 @@ import React, { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import "../styles/home.css";
 
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
-
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-
 export default function Home() {
   // ------------------- SCROLL ANIMATIONS -------------------
   useEffect(() => {
@@ -30,62 +23,52 @@ export default function Home() {
 
   return (
     <div className="home">
-      {/* =================== HERO SECTION =================== */}
-      <section className="hero">
-        <div className="hero-slider">
-          <Swiper
-            modules={[Autoplay, Pagination, Navigation]}
-            autoplay={{ delay: 2500 }}
-            pagination={{ clickable: true }}
-            navigation
-            loop
-          >
-            <SwiperSlide>
-              <img
-                src="https://images.pexels.com/photos/4101143/pexels-photo-4101143.jpeg"
-                alt="Demo Banner 1"
-              />
-            </SwiperSlide>
+      {/* =================== HERO SECTION (STATIC) =================== */}
+      <section className="hero-static">
+        <div className="hero-content">
+          <div className="hero-left fade-in">
+            <span className="hero-tag">WELCOME TO AAWAZ</span>
+            <h1>The best hearing aid in Nepal</h1>
+            <p>
+              You’ve come to the right place. Aawaz Speech & Hearing Center
+              offers advanced hearing solutions to help you hear and live
+              better.
+            </p>
 
-            <SwiperSlide>
-              <img
-                src="https://images.pexels.com/photos/3184406/pexels-photo-3184406.jpeg"
-                alt="Demo Banner 2"
-              />
-            </SwiperSlide>
+            <div className="hero-actions">
+              <NavLink to="/products">
+                <button className="btn-primary"> View Product</button>
+              </NavLink>
+              <NavLink to="/appointment">
+                <button className="btn-outline">Book Appointment</button>
+              </NavLink>
+            </div>
+          </div>
 
-            <SwiperSlide>
-              <img
-                src="https://images.pexels.com/photos/4126704/pexels-photo-4126704.jpeg"
-                alt="Demo Banner 3"
-              />
-            </SwiperSlide>
-          </Swiper>
-        </div>
-
-        <div className="hero-text fade-in">
-          {/* ---------- LOGO ADDED HERE ---------- */}
-          <img
-            src="https://via.placeholder.com/150x80?text=Aawaz+Clinic+Logo"
-            alt="Clinic Logo"
-            style={{ width: "140px", marginBottom: "15px" }}
-          />
-
-          <h1 style={{ color: "#111" }}>Let’s Celebrate Every Sound of Life!</h1>
-          <p style={{ color: "#444" }}>Advanced hearing care for you and your loved ones.</p>
-
-          <NavLink to="/appointment">
-            <button className="btn-primary hero-btn">Book Appointment</button>
-          </NavLink>
+          <div className="hero-right slide-right">
+            <img
+              src="/mnt/data/h.PNG"
+              alt="Hearing Aid User"
+              className="hero-image"
+            />
+          </div>
         </div>
       </section>
 
       {/* =================== WELCOME =================== */}
       <section className="section section-light fade-in">
-        <h2>Welcome to Aawaz Hearing Clinic</h2>
+        <h2>Welcome to Aawaz Hearing & Speech Care Center</h2>
         <p>
-          We provide high-quality hearing evaluations, speech therapy, and
-          advanced digital hearing aid technology for all age groups.
+          Your hearing and speech health is our top priority. Explore our
+          services to learn how we can help you or your loved ones improve
+          communication, address hearing concerns, and enhance overall auditory
+          wellness. Our team of experts provides personalized care, guidance,
+          and support for every stage of life.
+        </p>
+        <p>
+          From hearing assessments to speech therapy, tinnitus management, and
+          hearing aid fittings, we are here to ensure you receive the best
+          possible care with compassion and expertise.
         </p>
       </section>
 
@@ -128,10 +111,22 @@ export default function Home() {
         <h2 className="slide-right">Top Hearing Aid Brands</h2>
 
         <div className="brand-logos fade-in">
-          <img src="https://via.placeholder.com/120x50?text=Brand+1" alt="Brand 1" />
-          <img src="https://via.placeholder.com/120x50?text=Brand+2" alt="Brand 2" />
-          <img src="https://via.placeholder.com/120x50?text=Brand+3" alt="Brand 3" />
-          <img src="https://via.placeholder.com/120x50?text=Brand+4" alt="Brand 4" />
+          <img
+            src="https://via.placeholder.com/120x50?text=Brand+1"
+            alt="Brand 1"
+          />
+          <img
+            src="https://via.placeholder.com/120x50?text=Brand+2"
+            alt="Brand 2"
+          />
+          <img
+            src="https://via.placeholder.com/120x50?text=Brand+3"
+            alt="Brand 3"
+          />
+          <img
+            src="https://via.placeholder.com/120x50?text=Brand+4"
+            alt="Brand 4"
+          />
         </div>
       </section>
 
@@ -139,26 +134,17 @@ export default function Home() {
       <section className="section section-cream">
         <h2 className="fade-in">What Our Patients Say</h2>
 
-        <Swiper
-          modules={[Autoplay, Pagination]}
-          autoplay={{ delay: 3000 }}
-          pagination={{ clickable: true }}
-          loop
-        >
-          <SwiperSlide>
-            <div className="testimonial-card slide-left">
-              <p>“Amazing service! My father can hear clearly again.”</p>
-              <h4>— Patient A</h4>
-            </div>
-          </SwiperSlide>
+        <div className="testimonial-grid">
+          <div className="testimonial-card slide-left">
+            <p>“Amazing service! My father can hear clearly again.”</p>
+            <h4>— Patient A</h4>
+          </div>
 
-          <SwiperSlide>
-            <div className="testimonial-card slide-right">
-              <p>“Professional staff and excellent care.”</p>
-              <h4>— Patient B</h4>
-            </div>
-          </SwiperSlide>
-        </Swiper>
+          <div className="testimonial-card slide-right">
+            <p>“Professional staff and excellent care.”</p>
+            <h4>— Patient B</h4>
+          </div>
+        </div>
       </section>
 
       {/* =================== CONTACT CTA =================== */}
@@ -166,9 +152,14 @@ export default function Home() {
         <h2>Need Help With Hearing?</h2>
         <p>Contact us for evaluations, treatment and expert advice.</p>
 
-        <NavLink to="/contact">
-          <button className="btn-primary contact-btn">Contact Us</button>
-        </NavLink>
+        <div className="cta-actions">
+          <NavLink to="/contact">
+            <button className="btn-primary">Contact Us</button>
+          </NavLink>
+          <NavLink to="/appointment">
+            <button className="btn-outline">Book Appointment</button>
+          </NavLink>
+        </div>
       </section>
     </div>
   );

@@ -1,31 +1,41 @@
 import React from "react";
 import "../styles/products.css";
 
+// Import product images
+import BTEImg from "../assets/product/BTE.png";
+import CICImg from "../assets/product/CIC.png";
+import IICImg from "../assets/product/IIC.png";
+import ITEImg from "../assets/product/ITE.png";
+import RICImg from "../assets/product/RIC.png";
+
+// Import contact/help image
+import contactImg from "../assets/service/contact.jpg";
+
 const products = [
   {
     id: 1,
     name: "Receiver-In-Canal (RIC)",
-    img: "/images/products/ric.jpg",
+    img: RICImg,
   },
   {
     id: 2,
     name: "In-The-Ear (ITE)",
-    img: "/images/products/ite.jpg",
+    img: ITEImg,
   },
   {
     id: 3,
     name: "Invisible-In-Canal (IIC)",
-    img: "/images/products/iic.jpg",
+    img: IICImg,
   },
   {
     id: 4,
     name: "Completely-In-Canal (CIC)",
-    img: "/images/products/cic.jpg",
+    img: CICImg,
   },
   {
     id: 5,
     name: "Behind-The-Ear (BTE)",
-    img: "/images/products/bte.jpg",
+    img: BTEImg,
   },
 ];
 
@@ -60,7 +70,7 @@ export default function Products() {
           <a href="/contact" className="contact-btn">Contact Us</a>
         </div>
 
-        <img src="/images/products/help.jpg" alt="help" className="help-img" />
+        <img src={contactImg} alt="help" className="help-img" />
       </div>
 
     </div>

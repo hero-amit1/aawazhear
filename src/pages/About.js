@@ -1,6 +1,24 @@
 import React, { useEffect } from "react";
 import "../styles/about.css";
 
+// Brand Images
+import brand1 from "../assets/brand/brand1.jpg";
+import brand2 from "../assets/brand/brand2.jpg";
+import brand3 from "../assets/brand/brand3.jpg";
+import brand4 from "../assets/brand/brand4.jpg";
+import brand5 from "../assets/brand/brand5.jpg";
+import brand6 from "../assets/brand/brand6.jpg";
+
+// Contact Image
+import contactImg from "../assets/service/contact.jpg";
+
+// About Section Images
+import whoweareImg from "../assets/about/whoweare.jpg";
+import doctorImg from "../assets/about/doctor.jpeg";
+import hearingAidsImg from "../assets/about/HearingAids.webp";
+import hearingAssessmentsImg from "../assets/about/HearingAssessments.webp";
+import speechTherapyImg from "../assets/about/SpeechTherapy.jfif";
+
 export default function About() {
 
   // SCROLL REVEAL ANIMATION
@@ -39,8 +57,8 @@ export default function About() {
       <section className="section-row slide-left">
         <div className="image-box zoom-hover">
           <img
-            src="https://images.pexels.com/photos/4101143/pexels-photo-4101143.jpeg"
-            alt="clinic"
+            src={whoweareImg}
+            alt="Who We Are"
           />
         </div>
 
@@ -66,19 +84,19 @@ export default function About() {
 
         <div className="service-grid">
           <div className="service-card fade-up">
-            <img src="https://images.pexels.com/photos/8460031/pexels-photo-8460031.jpeg" alt="" />
+            <img src={hearingAssessmentsImg} alt="Hearing Assessments" />
             <h4>Hearing Assessments</h4>
             <p>PTA, Tympanometry, OAE, ABR & more advanced tests.</p>
           </div>
 
           <div className="service-card fade-up">
-            <img src="https://images.pexels.com/photos/7089020/pexels-photo-7089020.jpeg" alt="" />
+            <img src={speechTherapyImg} alt="Speech Therapy" />
             <h4>Speech Therapy</h4>
             <p>For children & adults with speech, fluency & language disorders.</p>
           </div>
 
           <div className="service-card fade-up">
-            <img src="https://images.pexels.com/photos/8460128/pexels-photo-8460128.jpeg" alt="" />
+            <img src={hearingAidsImg} alt="Hearing Aids" />
             <h4>Hearing Aids</h4>
             <p>Digital, rechargeable & Bluetooth-enabled solutions.</p>
           </div>
@@ -87,28 +105,20 @@ export default function About() {
 
       {/* TEAM */}
       <section className="team-section fade-in">
-        <h2>Meet Our Specialists</h2>
+        <h2>Meet Our Specialist</h2>
         <p className="center-text">
-          Experienced & certified professionals dedicated to better hearing and communication.
+          Our experienced doctor is dedicated to improving hearing and speech health for all patients.
         </p>
 
         <div className="team-cards">
           <div className="team-card slide-up">
-            <img src="https://images.pexels.com/photos/5214958/pexels-photo-5214958.jpeg" alt="" />
-            <h4>Audiologists</h4>
-            <p>Experts in hearing evaluation & rehabilitation.</p>
-          </div>
-
-          <div className="team-card slide-up">
-            <img src="https://images.pexels.com/photos/6129681/pexels-photo-6129681.jpeg" alt="" />
-            <h4>Speech Therapists</h4>
-            <p>Helping children & adults communicate effectively.</p>
-          </div>
-
-          <div className="team-card slide-up">
-            <img src="https://images.pexels.com/photos/8460155/pexels-photo-8460155.jpeg" alt="" />
-            <h4>Care Professionals</h4>
-            <p>Ensuring a friendly, supportive & comfortable experience.</p>
+            <img src={doctorImg} alt="Doctor" />
+            <h4>Doctor</h4>
+            <p>
+              Our lead specialist provides comprehensive hearing and speech evaluations.
+              With years of experience and compassionate care, the doctor ensures personalized
+              treatment plans for every patient, helping them regain clarity in communication.
+            </p>
           </div>
         </div>
       </section>
@@ -143,10 +153,12 @@ export default function About() {
         <h2>Trusted Hearing Aid Partners</h2>
 
         <div className="brand-logos slide-left">
-          <img src="https://via.placeholder.com/150x60?text=Widex" alt="" />
-          <img src="https://via.placeholder.com/150x60?text=Signia" alt="" />
-          <img src="https://via.placeholder.com/150x60?text=Phonak" alt="" />
-          <img src="https://via.placeholder.com/150x60?text=Resound" alt="" />
+          <img src={brand1} alt="Brand 1" />
+          <img src={brand2} alt="Brand 2" />
+          <img src={brand3} alt="Brand 3" />
+          <img src={brand4} alt="Brand 4" />
+          <img src={brand5} alt="Brand 5" />
+          <img src={brand6} alt="Brand 6" />
         </div>
       </section>
 
@@ -156,12 +168,11 @@ export default function About() {
           <h2>Need Assistance?</h2>
           <p className="phone">981-3573953</p>
           <p>Our experts are ready to guide you on hearing & speech solutions.</p>
-          <button className="contact-btn">Contact Us</button>
         </div>
 
         <div className="contact-image zoom-hover">
           <img
-            src="https://images.pexels.com/photos/7088523/pexels-photo-7088523.jpeg"
+            src={contactImg}
             alt="hearing aid"
           />
         </div>

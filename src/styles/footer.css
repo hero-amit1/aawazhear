@@ -59,16 +59,18 @@
   margin-bottom: 8px;
 }
 
+/* Social Icons */
 .footer-social {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 16px; /* slightly larger gap for FB, Google, WhatsApp */
+  margin-bottom: 15px;
 }
 
 .footer-icon {
   color: #ff6600; /* orange icons */
   cursor: pointer;
-  font-size: 22px;
+  font-size: 24px; /* slightly larger for visibility */
   transition: 0.3s ease;
 }
 
@@ -76,6 +78,7 @@
   color: #e60023; /* red hover */
 }
 
+/* Contact Info */
 .footer-contact {
   display: flex;
   align-items: center;
@@ -103,7 +106,7 @@
   font-size: 14px;
   color: #555;
 }
-  
+
 /* Responsive */
 @media (max-width: 768px) {
   .footer-content {
@@ -113,9 +116,11 @@
 
   .footer-column {
     width: 100%;
+    margin-bottom: 25px;
   }
 
   .footer-social {
     justify-content: center;
+    gap: 20px; /* more spacing on mobile */
   }
 }

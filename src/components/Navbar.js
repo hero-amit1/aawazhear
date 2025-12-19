@@ -1,36 +1,31 @@
 import React, { useState, useEffect } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import "../styles/navbar.css";
+import logo from "../assets/logo.jpeg";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
 
-  // Close menu on route change
   useEffect(() => {
     setOpen(false);
   }, [location.pathname]);
 
-  // Navbar shadow on scroll
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
-    };
+    const handleScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
-
-      {/* LOGO + BRAND */}
+      {/* LEFT: LOGO + BRAND */}
       <div className="nav-left">
         <NavLink to="/" className="logo-container">
-          <img src="/logo.png" alt="Clinic Logo" className="nav-logo" />
+          <img src={logo} alt="Aawaz Logo" className="nav-logo" />
           <div className="brand-text">
-            <h3>AawAZ Hearing &</h3>
-            <h3>Speech Care Center</h3>
+            Aawaz Hearing & Speech Care Center
           </div>
         </NavLink>
       </div>

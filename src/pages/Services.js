@@ -1,6 +1,17 @@
 import React, { useEffect, useRef } from "react";
 import "../styles/services.css";
 
+// Import images from assets
+import PTAImg from "../assets/service/PTA.jpg";
+import TympanometryImg from "../assets/service/Tympanometry.jpg";
+import HearingEvaluationImg from "../assets/service/comprenshive.jpg";
+import SpeechTherapyImg from "../assets/service/speech.jpg";
+import TinnitusImg from "../assets/service/tinnitus.jpg";
+import HearingAidImg from "../assets/service/hearingaids.jpg";
+import OAEImg from "../assets/service/oae.png";
+import ABRImg from "../assets/service/ABR.jpg";
+import ContactImg from "../assets/service/contact.jpg"; // help section image
+
 export default function Services() {
   const sectionsRef = useRef([]);
 
@@ -44,10 +55,7 @@ export default function Services() {
 
         {/* SERVICE 1 */}
         <div className="service-item slide-right hidden" ref={(el) => attachRef(el, 0)}>
-          <img
-            src="https://images.pexels.com/photos/8460121/pexels-photo-8460121.jpeg"
-            alt="PTA Hearing Test"
-          />
+          <img src={PTAImg} alt="PTA Hearing Test" />
           <div className="service-content">
             <h2>PTA Test (Diagnostic Audiometer)</h2>
             <p>
@@ -69,19 +77,12 @@ export default function Services() {
               ear muscle reflexes. They are quick, non-invasive, and suitable for all age groups.
             </p>
           </div>
-
-          <img
-            src="https://images.pexels.com/photos/8376235/pexels-photo-8376235.jpeg"
-            alt="Tympanometry Test"
-          />
+          <img src={TympanometryImg} alt="Tympanometry Test" />
         </div>
 
         {/* SERVICE 3 */}
         <div className="service-item slide-right hidden" ref={(el) => attachRef(el, 2)}>
-          <img
-            src="https://images.pexels.com/photos/5327927/pexels-photo-5327927.jpeg"
-            alt="Hearing Evaluation"
-          />
+          <img src={HearingEvaluationImg} alt="Hearing Evaluation" />
           <div className="service-content">
             <h2>Comprehensive Hearing Tests</h2>
             <p>
@@ -102,19 +103,12 @@ export default function Services() {
               and supportive for both children and adults.
             </p>
           </div>
-
-          <img
-            src="https://images.pexels.com/photos/5212329/pexels-photo-5212329.jpeg"
-            alt="Speech Therapy"
-          />
+          <img src={SpeechTherapyImg} alt="Speech Therapy" />
         </div>
 
         {/* SERVICE 5 */}
         <div className="service-item slide-right hidden" ref={(el) => attachRef(el, 4)}>
-          <img
-            src="https://images.pexels.com/photos/4100649/pexels-photo-4100649.jpeg"
-            alt="Tinnitus Therapy"
-          />
+          <img src={TinnitusImg} alt="Tinnitus Therapy" />
           <div className="service-content">
             <h2>Tinnitus Retraining Therapy (TRT)</h2>
             <p>
@@ -135,19 +129,12 @@ export default function Services() {
               comfort, clarity, and ongoing support.
             </p>
           </div>
-
-          <img
-            src="https://images.pexels.com/photos/8376235/pexels-photo-8376235.jpeg"
-            alt="Hearing Aid Trial"
-          />
+          <img src={HearingAidImg} alt="Hearing Aid Trial" />
         </div>
 
         {/* SERVICE 7 */}
         <div className="service-item slide-right hidden" ref={(el) => attachRef(el, 6)}>
-          <img
-            src="https://images.pexels.com/photos/8460121/pexels-photo-8460121.jpeg"
-            alt="OAE Test"
-          />
+          <img src={OAEImg} alt="OAE Test" />
           <div className="service-content">
             <h2>Otoacoustic Emissions (OAE)</h2>
             <p>
@@ -168,11 +155,7 @@ export default function Services() {
               standard hearing tests.
             </p>
           </div>
-
-          <img
-            src="https://images.pexels.com/photos/4101143/pexels-photo-4101143.jpeg"
-            alt="ABR Test"
-          />
+          <img src={ABRImg} alt="ABR Test" />
         </div>
 
       </div>
@@ -185,12 +168,7 @@ export default function Services() {
           <p>📞 981-3375935</p>
           <button>Contact Us</button>
         </div>
-
-        <img
-          className="help-img"
-          src="https://images.pexels.com/photos/7089500/pexels-photo-7089500.jpeg"
-          alt="Help Support"
-        />
+        <img className="help-img" src={ContactImg} alt="Help Support" />
       </div>
 
     </div>
