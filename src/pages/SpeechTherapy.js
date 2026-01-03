@@ -2,6 +2,10 @@ import React from "react";
 import { motion } from "framer-motion";
 import "../styles/SpeechTherapy.css";
 
+/* ===== IMPORT LOCAL IMAGES ===== */
+import SpeechImg from "../assets/speechtherapy/speech.jpeg";
+import SpeechDevImg from "../assets/speechtherapy/speechdev.webp";
+
 export default function SpeechTherapy() {
   return (
     <div className="speech-page">
@@ -19,7 +23,7 @@ export default function SpeechTherapy() {
       {/* Intro Section */}
       <section className="speech-intro">
         <motion.img
-          src="https://images.pexels.com/photos/4101143/pexels-photo-4101143.jpeg"
+          src={SpeechImg}       // <-- local image
           alt="Speech Therapy"
           className="speech-img"
           whileHover={{ scale: 1.08 }}
@@ -56,7 +60,7 @@ export default function SpeechTherapy() {
 
         <div className="speech-card-content">
           <motion.img
-            src="https://images.pexels.com/photos/4100649/pexels-photo-4100649.jpeg"
+            src={SpeechDevImg}   // <-- local image
             alt="Therapy Session"
             className="speech-card-img"
             whileHover={{ scale: 1.07 }}
@@ -111,7 +115,7 @@ export default function SpeechTherapy() {
         >
           <h4>Need Help?</h4>
           <h2>Call Us</h2>
-          <p className="phone">📞 981-3737953</p>
+          <p className="phone">📞 9845192771</p>
           <p>If you need any hearing or speech-related support, feel free to contact us.</p>
 
           <motion.a
@@ -124,7 +128,7 @@ export default function SpeechTherapy() {
         </motion.div>
 
         <motion.img
-          src="https://images.pexels.com/photos/7088470/pexels-photo-7088470.jpeg"
+          src={SpeechDevImg}    // <-- local image
           alt="Hearing Aid"
           className="contact-img"
           whileHover={{ scale: 1.07 }}

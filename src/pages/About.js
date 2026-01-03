@@ -20,7 +20,6 @@ import hearingAssessmentsImg from "../assets/about/HearingAssessments.webp";
 import speechTherapyImg from "../assets/about/SpeechTherapy.jfif";
 
 export default function About() {
-
   // SCROLL REVEAL ANIMATION
   useEffect(() => {
     const revealElements = document.querySelectorAll(
@@ -44,33 +43,54 @@ export default function About() {
 
   return (
     <div className="about-page">
-
       {/* HERO BANNER */}
       <section className="hero-banner fade-down">
         <div className="hero-text">
           <h1>Aawaz Hearing & Speech Care Center</h1>
-          <p>Your trusted partner for hearing, speech & communication wellness.</p>
+          <p>
+            Your trusted partner for hearing, speech & communication wellness.
+          </p>
         </div>
       </section>
 
       {/* WHO WE ARE */}
       <section className="section-row slide-left">
         <div className="image-box zoom-hover">
-          <img
-            src={whoweareImg}
-            alt="Who We Are"
-          />
+          <img src={whoweareImg} alt="Who We Are" />
         </div>
 
         <div className="text-box">
           <h2>Who We Are</h2>
           <p>
-            We are a specialized hearing and speech diagnostic center committed
-            to improving lives through advanced evaluation, therapy, and rehabilitation.
+            Welcome to Aawaz Hearing and Speech Center, Bharatpur, Chitwan –
+            your trusted partner in empowering communication and improving the
+            quality of life for those with hearing and speech challenges. At
+            Aawaz, we believe that everyone deserves the right to clear,
+            confident communication and accessible support, regardless of
+            background or circumstance.
           </p>
           <p>
-            Our mission is to deliver world-class care using modern technology
-            and compassionate support for all ages.
+            Our mission is clear: to provide high-quality hearing and speech
+            services and products, supported by the latest technology and a
+            compassionate team dedicated to each individual’s unique needs. From
+            state-of-the-art hearing aids to personalized therapy services, our
+            solutions are designed to cater to the diverse needs of individuals
+            and families across Chitwan and beyond.
+          </p>
+          <p>
+            We prioritize excellence and accessibility in our services, working
+            closely with leading professionals and suppliers to ensure premium
+            quality at affordable prices. Our center is committed not only to
+            enhancing personal well-being but also to supporting the broader
+            community’s understanding and acceptance of hearing and speech
+            challenges.
+          </p>
+          <p>
+            At Aawaz Hearing and Speech Center, we’re more than just a service
+            provider; we’re part of a movement toward a future where everyone
+            can be heard and understood. Thank you for choosing Aawaj as your
+            partner in communication and connection. Together, we’re breaking
+            barriers and building bridges toward a more inclusive world.
           </p>
         </div>
       </section>
@@ -79,7 +99,8 @@ export default function About() {
       <section className="wide-section fade-in">
         <h2>What We Provide</h2>
         <p className="center-text">
-          A complete range of hearing and speech solutions—from diagnosis to rehabilitation.
+          A complete range of hearing and speech solutions—from diagnosis to
+          rehabilitation.
         </p>
 
         <div className="service-grid">
@@ -92,7 +113,9 @@ export default function About() {
           <div className="service-card fade-up">
             <img src={speechTherapyImg} alt="Speech Therapy" />
             <h4>Speech Therapy</h4>
-            <p>For children & adults with speech, fluency & language disorders.</p>
+            <p>
+              For children & adults with speech, fluency & language disorders.
+            </p>
           </div>
 
           <div className="service-card fade-up">
@@ -107,18 +130,26 @@ export default function About() {
       <section className="team-section fade-in">
         <h2>Meet Our Specialist</h2>
         <p className="center-text">
-          Our experienced doctor is dedicated to improving hearing and speech health for all patients.
+          Our experienced doctor is dedicated to improving hearing and speech
+          health for all patients.
         </p>
 
         <div className="team-cards">
           <div className="team-card slide-up">
-            <img src={doctorImg} alt="Doctor" />
-            <h4>Doctor</h4>
-            <p>
-              Our lead specialist provides comprehensive hearing and speech evaluations.
-              With years of experience and compassionate care, the doctor ensures personalized
-              treatment plans for every patient, helping them regain clarity in communication.
-            </p>
+            <div className="team-card-inner">
+              <img src={doctorImg} alt="Doctor" className="team-img" />
+              <div className="team-text">
+                <h4>MR. JAYLAL PRASAD YADAV</h4>
+                <p>
+                  Mr. JAYLAL PRASAD YADAV completed his bachelor's and master's
+                  degree in Audiology and Speech Language Pathology from M.V
+                  Shetty College of Speech and Hearing, Mangalore University. He
+                  is currently working as assistant professor at Chitwan Medical
+                  College. He has served as the clinical Director of Aawaj
+                  hearing and speech care center Bharatpur 10, Chitwan.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -166,18 +197,16 @@ export default function About() {
       <section className="contact-strip slide-up">
         <div className="contact-text">
           <h2>Need Assistance?</h2>
-          <p className="phone">981-3573953</p>
-          <p>Our experts are ready to guide you on hearing & speech solutions.</p>
+          <p className="phone">9845192771</p>
+          <p>
+            Our experts are ready to guide you on hearing & speech solutions.
+          </p>
         </div>
 
         <div className="contact-image zoom-hover">
-          <img
-            src={contactImg}
-            alt="hearing aid"
-          />
+          <img src={contactImg} alt="hearing aid" />
         </div>
       </section>
-
     </div>
   );
 }

@@ -10,6 +10,7 @@ import {
   FaInstagram,
   FaClock,
   FaWhatsapp,
+  FaGoogle,
 } from "react-icons/fa";
 
 export default function Contact() {
@@ -44,7 +45,6 @@ export default function Contact() {
     if (!/^[0-9]{7,10}$/.test(form.phone)) err.phone = "Invalid phone number";
     if (!form.subject.trim()) err.subject = "Subject is required";
     if (!form.message.trim()) err.message = "Message cannot be empty";
-    if (!form.human) err.human = "Please confirm you are human";
 
     return err;
   };
@@ -56,9 +56,23 @@ export default function Contact() {
     setErrors(validation);
 
     if (Object.keys(validation).length === 0) {
+      const emailBody = `
+Name: ${form.name}
+Email: ${form.email}
+Phone: ${form.phone}
+
+Message:
+${form.message}
+      `;
+
+      window.location.href = `mailto:aawazclinic42@gmail.com?subject=${encodeURIComponent(
+        form.subject
+      )}&body=${encodeURIComponent(emailBody)}`;
+
       setSuccessMsg(
         "Your message has been sent successfully! We will contact you soon."
       );
+
       setForm({
         name: "",
         email: "",
@@ -159,18 +173,9 @@ export default function Contact() {
                 onChange={handleChange}
                 placeholder="Your Message"
               />
-              {errors.message && <p className="error-text">{errors.message}</p>}
-
-              <label className="human-label">
-                <input
-                  name="human"
-                  type="checkbox"
-                  checked={form.human}
-                  onChange={handleChange}
-                />
-                <span className="checkmark"></span>I confirm I am human
-              </label>
-              {errors.human && <p className="error-text">{errors.human}</p>}
+              {errors.message && (
+                <p className="error-text">{errors.message}</p>
+              )}
 
               <button type="submit" className="contact-submit">
                 Submit Message
@@ -185,25 +190,17 @@ export default function Contact() {
 
             <div className="contact-info-item">
               <FaMapMarkerAlt />
-              <p>
-                Room 105, Butwal Complex <br />
-                Butwal, Nepal
-              </p>
+              <p>Bharatpur-10, Hospital Road Chitwan</p>
             </div>
 
             <div className="contact-info-item">
               <FaPhoneAlt />
-              <p>+977 981-3379393</p>
-            </div>
-
-            <div className="contact-info-item">
-              <FaPhoneAlt />
-              <p>+977 071-000000</p>
+              <p>+977 9845192771</p>
             </div>
 
             <div className="contact-info-item">
               <FaEnvelope />
-              <p>aawazhearing@gmail.com</p>
+              <p>aawazclinic42@gmail.com</p>
             </div>
 
             {/* Opening Hours */}
@@ -216,7 +213,7 @@ export default function Contact() {
             {/* Social Media */}
             <div className="contact-social">
               <a
-                href="https://facebook.com"
+                href="https://facebook.com/aawazhearing/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -224,15 +221,15 @@ export default function Contact() {
               </a>
 
               <a
-                href="https://instagram.com"
+                href="https://www.google.com/maps/dir/27.705344,84.4131412/aawaz+speech+and+hearing+clinic"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FaInstagram />
+                <FaGoogle />
               </a>
 
               <a
-                href="https://wa.me/9779813379393"
+                href="https://wa.me/97798451927713"
                 target="_blank"
                 rel="noopener noreferrer"
               >

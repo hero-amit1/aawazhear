@@ -19,43 +19,52 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
-      {/* LEFT: LOGO + BRAND */}
-      <div className="nav-left">
-        <NavLink to="/" className="logo-container">
-          <img src={logo} alt="Aawaz Logo" className="nav-logo" />
-          <div className="brand-text">
-            Aawaz Hearing & Speech Care Center
-          </div>
-        </NavLink>
-      </div>
+    <>
+      {/* OVERLAY */}
+      <div
+        className={`nav-overlay ${open ? "show" : ""}`}
+        onClick={() => setOpen(false)}
+      />
 
-      {/* HAMBURGER */}
-      <button
-        className={`hamburger ${open ? "active" : ""}`}
-        onClick={() => setOpen(!open)}
-        aria-label="Toggle Menu"
-      >
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-
-      {/* NAV LINKS */}
-      <ul className={`nav-links ${open ? "open" : ""}`}>
-        <li><NavLink to="/" end>Home</NavLink></li>
-        <li><NavLink to="/about">About</NavLink></li>
-        <li><NavLink to="/services">Services</NavLink></li>
-        <li><NavLink to="/products">Products</NavLink></li>
-        <li><NavLink to="/speech-therapy">Speech Therapy</NavLink></li>
-        <li><NavLink to="/faq">FAQ</NavLink></li>
-        <li><NavLink to="/contact">Contact</NavLink></li>
-        <li className="nav-cta">
-          <NavLink to="/appointment" className="appointment-btn">
-            Book Appointment
+      <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
+        {/* LOGO */}
+        <div className="nav-left">
+          <NavLink to="/" className="logo-container">
+            <img src={logo} alt="Aawaz Logo" className="nav-logo" />
+            <div className="brand-text">
+              Aawaz Hearing & Speech Care Center
+            </div>
           </NavLink>
-        </li>
-      </ul>
-    </nav>
+        </div>
+
+        {/* HAMBURGER */}
+        <button
+          className={`hamburger ${open ? "active" : ""}`}
+          onClick={() => setOpen(!open)}
+          aria-label="Toggle Menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        {/* SIDE NAV */}
+        <ul className={`nav-links ${open ? "open" : ""}`}>
+          <li><NavLink to="/" end>Home</NavLink></li>
+          <li><NavLink to="/about">About</NavLink></li>
+          <li><NavLink to="/services">Services</NavLink></li>
+          <li><NavLink to="/products">Products</NavLink></li>
+          <li><NavLink to="/speech-therapy">Speech Therapy</NavLink></li>
+          <li><NavLink to="/faq">FAQ</NavLink></li>
+          <li><NavLink to="/contact">Contact</NavLink></li>
+
+          <li className="nav-cta">
+            <NavLink to="/appointment" className="appointment-btn">
+              Book Appointment
+            </NavLink>
+          </li>
+        </ul>
+      </nav>
+    </>
   );
 }

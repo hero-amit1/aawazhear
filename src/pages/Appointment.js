@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import axios from "axios";
-import "../styles/Appointment.css"; // IMPORTANT: include CSS file
+import "../styles/Appointment.css";
 
 export default function Appointments() {
   const [formData, setFormData] = useState({
@@ -18,25 +17,35 @@ export default function Appointments() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     setStatus("Submitting...");
 
-    try {
-      await axios.post("http://localhost:5000/api/appointments", formData);
-      setStatus("success");
-      setFormData({
-        fullName: "",
-        email: "",
-        phone: "",
-        service: "",
-        date: "",
-        message: "",
-      });
-    } catch (error) {
-      console.error(error);
-      setStatus("error");
-    }
+    const emailBody = `
+Full Name: ${formData.fullName}
+Email: ${formData.email}
+Phone: ${formData.phone}
+Service: ${formData.service}
+Date: ${formData.date}
+
+Message:
+${formData.message || "N/A"}
+    `;
+
+    window.location.href = `mailto:aawazclinic42@gmail.com?subject=New Appointment Booking&body=${encodeURIComponent(
+      emailBody
+    )}`;
+
+    setStatus("success");
+
+    setFormData({
+      fullName: "",
+      email: "",
+      phone: "",
+      service: "",
+      date: "",
+      message: "",
+    });
   };
 
   return (
@@ -70,7 +79,7 @@ export default function Appointments() {
 
           <div className="form-row">
             <input
-              type="number"
+              type="text"
               name="phone"
               placeholder="Phone Number"
               value={formData.phone}
@@ -114,11 +123,11 @@ export default function Appointments() {
         </form>
 
         {status === "success" && (
-          <p className="success-msg">✔ Appointment request sent successfully!</p>
+          <p className="success-msg">
+            ✔ Your appointment is booked successfully! We will contact you soon.
+          </p>
         )}
-        {status === "error" && (
-          <p className="error-msg">✖ Something went wrong. Try again.</p>
-        )}
+
         {status === "Submitting..." && (
           <p className="loading-msg">⏳ Submitting...</p>
         )}

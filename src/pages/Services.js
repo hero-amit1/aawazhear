@@ -35,7 +35,6 @@ export default function Services() {
 
   return (
     <div className="services-page">
-
       {/* HEADER BANNER */}
       <div className="services-banner fade-down">
         <h1>Our Services</h1>
@@ -44,120 +43,194 @@ export default function Services() {
       {/* INTRO */}
       <div className="services-intro fade-up">
         <p>
-          At Aawaz Hearing & Speech Care Center, we provide comprehensive diagnostic,
-          therapeutic, and rehabilitative services using advanced technology and
-          personalized care for all age groups.
+          At Aawaz Hearing & Speech Care Center, we provide comprehensive
+          diagnostic, therapeutic, and rehabilitative services using advanced
+          technology and personalized care for all age groups.
         </p>
       </div>
 
       {/* SERVICES LIST */}
       <div className="services-list">
-
         {/* SERVICE 1 */}
-        <div className="service-item slide-right hidden" ref={(el) => attachRef(el, 0)}>
+        <div
+          className="service-item slide-right hidden"
+          ref={(el) => attachRef(el, 0)}
+        >
           <img src={PTAImg} alt="PTA Hearing Test" />
           <div className="service-content">
             <h2>PTA Test (Diagnostic Audiometer)</h2>
             <p>
-              Pure Tone Audiometry (PTA) is a key diagnostic test used to assess hearing
-              sensitivity by identifying the softest sounds you can hear at different pitches.
-              Our experienced audiologists use advanced diagnostic audiometers to ensure
-              accurate results and personalized treatment planning.
+              The Pure Tone Audiometry (PTA) test is a key diagnostic tool used
+              at Aawaj Hearing and Speech Center to assess hearing sensitivity.
+              This test helps us determine the softest sounds you can hear at
+              various pitches. Our experienced audiologists use advanced
+              diagnostic audiometers to ensure accurate results, which guide us
+              in crafting personalized treatment plans to meet your auditory
+              needs.
             </p>
           </div>
         </div>
 
         {/* SERVICE 2 */}
-        <div className="service-item reverse slide-left hidden" ref={(el) => attachRef(el, 1)}>
+        <div
+          className="service-item reverse slide-left hidden"
+          ref={(el) => attachRef(el, 1)}
+        >
           <div className="service-content">
             <h2>Tympanometry & Stapedius Reflex Test</h2>
             <p>
-              These tests evaluate middle ear function. Tympanometry measures eardrum movement
-              in response to air pressure changes, while the Stapedius Reflex Test checks middle
-              ear muscle reflexes. They are quick, non-invasive, and suitable for all age groups.
+              Tympanometry and Stapedius Reflex testing are essential diagnostic
+              tools used at Aawaj Hearing and Speech Center to assess middle ear
+              function. Tympanometry measures the movement of the eardrum in
+              response to changes in air pressure, while the Stapedius Reflex
+              Test evaluates the reflexes of the middle ear muscles. These tests
+              help in diagnosing various middle ear conditions and provide a
+              comprehensive understanding of auditory health.
+            </p>
+            <p>
+              Our audiologists use state-of-the-art equipment to conduct these
+              tests, ensuring precise results that aid in tailoring the best
+              treatment options for our patients. The testing is non-invasive,
+              quick, and suitable for all age groups.
             </p>
           </div>
           <img src={TympanometryImg} alt="Tympanometry Test" />
         </div>
 
         {/* SERVICE 3 */}
-        <div className="service-item slide-right hidden" ref={(el) => attachRef(el, 2)}>
+        <div
+          className="service-item slide-right hidden"
+          ref={(el) => attachRef(el, 2)}
+        >
           <img src={HearingEvaluationImg} alt="Hearing Evaluation" />
           <div className="service-content">
             <h2>Comprehensive Hearing Tests</h2>
             <p>
-              We offer a wide range of hearing tests to accurately assess your auditory health.
-              Whether you experience mild hearing difficulty or significant hearing loss,
-              our assessments help identify your unique needs and guide effective solutions.
+              At Aawaj Hearing and Speech Center, we offer a wide range of
+              hearing tests designed to assess and enhance your auditory health.
+              Our state-of-the-art facilities and expert audiologists are here
+              to provide you with a comfortable and accurate hearing assessment.
+              Whether you’re experiencing mild difficulties or significant
+              hearing loss, our tests are tailored to identify your unique needs
+              and guide you towards the best solutions.
             </p>
           </div>
         </div>
 
         {/* SERVICE 4 */}
-        <div className="service-item reverse slide-left hidden" ref={(el) => attachRef(el, 3)}>
+        <div
+          className="service-item reverse slide-left hidden"
+          ref={(el) => attachRef(el, 3)}
+        >
           <div className="service-content">
             <h2>Speech & Language Therapy</h2>
             <p>
-              Our licensed speech-language pathologists provide personalized therapy for
-              articulation, fluency, voice, and language development. Sessions are engaging
-              and supportive for both children and adults.
+              At Aawaj Hearing and Speech Center, we offer comprehensive speech
+              and language therapy services to help individuals of all ages
+              improve their communication skills. Our licensed speech-language
+              pathologists provide personalized assessments and tailored
+              treatment plans to address various speech and language challenges,
+              including articulation, fluency, and language development. Our
+              therapy sessions are designed to be engaging and supportive,
+              ensuring that each individual feels comfortable while working
+              towards their communication goals. Whether you are seeking therapy
+              for a child or an adult, our dedicated team is here to assist you
+              on your journey to better communication.
             </p>
           </div>
           <img src={SpeechTherapyImg} alt="Speech Therapy" />
         </div>
 
         {/* SERVICE 5 */}
-        <div className="service-item slide-right hidden" ref={(el) => attachRef(el, 4)}>
+        <div
+          className="service-item slide-right hidden"
+          ref={(el) => attachRef(el, 4)}
+        >
           <img src={TinnitusImg} alt="Tinnitus Therapy" />
           <div className="service-content">
             <h2>Tinnitus Retraining Therapy (TRT)</h2>
             <p>
-              TRT is an evidence-based approach that retrains the brain to perceive tinnitus
-              sounds as neutral. Our program combines sound therapy and counseling to reduce
-              the impact of tinnitus on daily life.
+              Tinnitus Retraining Therapy (TRT) is an evidence-based treatment
+              offered at Aawaj Hearing and Speech Center to help individuals
+              manage tinnitus. This therapy aims to retrain the brain to
+              perceive tinnitus sounds as neutral, reducing their impact on
+              daily life. Our TRT program combines sound therapy and counseling
+              to address both the auditory and psychological aspects of
+              tinnitus. Our specialists provide personalized guidance to ensure
+              the therapy aligns with each patient’s unique needs, helping them
+              achieve long-term relief.
             </p>
           </div>
         </div>
 
         {/* SERVICE 6 */}
-        <div className="service-item reverse slide-left hidden" ref={(el) => attachRef(el, 5)}>
+        <div
+          className="service-item reverse slide-left hidden"
+          ref={(el) => attachRef(el, 5)}
+        >
           <div className="service-content">
             <h2>Hearing Aid Trials & Fittings</h2>
             <p>
-              We provide comprehensive hearing aid trials and fittings, allowing patients
-              to test devices in real-world environments. Our audiologists ensure optimal
-              comfort, clarity, and ongoing support.
+              At Aawaj Hearing and Speech Center, we understand that choosing
+              the right hearing aid is a significant decision. That's why we
+              offer comprehensive hearing aid trials and fittings to ensure that
+              you find the perfect solution for your hearing needs. Our
+              experienced audiologists will guide you through the process,
+              providing personalized assessments to recommend the most suitable
+              devices for your lifestyle. During your trial period, you can test
+              different models in real-world environments, allowing you to
+              experience the benefits firsthand. Our team will provide ongoing
+              support and adjustments to ensure optimal comfort and performance,
+              making your transition to hearing aids as smooth as possible.
             </p>
           </div>
           <img src={HearingAidImg} alt="Hearing Aid Trial" />
         </div>
 
         {/* SERVICE 7 */}
-        <div className="service-item slide-right hidden" ref={(el) => attachRef(el, 6)}>
+        <div
+          className="service-item slide-right hidden"
+          ref={(el) => attachRef(el, 6)}
+        >
           <img src={OAEImg} alt="OAE Test" />
           <div className="service-content">
             <h2>Otoacoustic Emissions (OAE)</h2>
             <p>
-              OAE testing evaluates inner ear (cochlear) function and is especially useful
-              for newborns and young children. This non-invasive test delivers fast and
-              accurate hearing assessment results.
+              Otoacoustic Emissions (OAE) testing is a crucial tool used at
+              Aawaj Hearing and Speech Center to evaluate the function of the
+              inner ear, specifically the cochlea. This non-invasive test helps
+              detect hearing loss in individuals of all ages, including newborns
+              and young children who may not be able to communicate their
+              hearing difficulties. Our advanced OAE testing equipment provides
+              quick and accurate results, enabling our audiologists to make
+              informed recommendations for your hearing health. We strive to
+              make the testing process as comfortable as possible, ensuring a
+              stress-free experience for both children and adults.
             </p>
           </div>
         </div>
 
         {/* SERVICE 8 */}
-        <div className="service-item reverse slide-left hidden" ref={(el) => attachRef(el, 7)}>
+        <div
+          className="service-item reverse slide-left hidden"
+          ref={(el) => attachRef(el, 7)}
+        >
           <div className="service-content">
             <h2>Auditory Brainstem Response (ABR)</h2>
             <p>
-              ABR testing measures the brain’s response to sound and helps diagnose hearing
-              and neurological conditions. It is ideal for individuals unable to undergo
-              standard hearing tests.
+              The Auditory Brainstem Response (ABR) test is a reliable
+              diagnostic tool offered at Aawaj Hearing and Speech Center. This
+              test measures the brain's response to sounds and is used to assess
+              hearing and neurological function, especially in individuals who
+              cannot undergo standard hearing tests. ABR testing is non-invasive
+              and provides valuable information about the auditory pathway,
+              helping our specialists diagnose conditions such as hearing loss,
+              auditory neuropathy, and more. Our team ensures a comfortable
+              experience and accurate results for all patients.
             </p>
           </div>
           <img src={ABRImg} alt="ABR Test" />
         </div>
-
       </div>
 
       {/* HELP SECTION */}
@@ -165,12 +238,11 @@ export default function Services() {
         <div className="help-text">
           <h3>Need Assistance?</h3>
           <h2>Call Us Anytime</h2>
-          <p>📞 981-3375935</p>
+          <p>📞 9845192771</p>
           <button>Contact Us</button>
         </div>
         <img className="help-img" src={ContactImg} alt="Help Support" />
       </div>
-
     </div>
   );
 }

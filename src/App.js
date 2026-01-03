@@ -6,7 +6,11 @@ import {
 
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-
+import RIC from "./pages/RIC";
+import ITE from "./pages/ITE";
+import IIC from "./pages/IIC";
+import CIC from "./pages/CIC";
+import BTE from "./pages/BTE";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Services from "./pages/Services";
@@ -31,6 +35,12 @@ function App() {
           <Route path="/faq" element={<FAQ />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/appointment" element={<Appointment />} />
+          <Route path="/ric" element={<RIC/>}/>
+<Route path="/ite" element={<ITE />} />
+<Route path="/iic" element={<IIC />} />
+<Route path="/cic" element={<CIC />} />
+<Route path="/bte" element={<BTE />} />
+
         </Routes>
       </div>
 

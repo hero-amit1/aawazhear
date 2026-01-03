@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "../styles/products.css";
 
 // Import product images
@@ -16,30 +17,37 @@ const products = [
     id: 1,
     name: "Receiver-In-Canal (RIC)",
     img: RICImg,
+    route: "/ric",
   },
   {
     id: 2,
     name: "In-The-Ear (ITE)",
     img: ITEImg,
+    route: "/ite",
   },
   {
     id: 3,
     name: "Invisible-In-Canal (IIC)",
     img: IICImg,
+    route: "/iic",
   },
   {
     id: 4,
     name: "Completely-In-Canal (CIC)",
     img: CICImg,
+    route: "/cic",
   },
   {
     id: 5,
     name: "Behind-The-Ear (BTE)",
     img: BTEImg,
+    route: "/bte",
   },
 ];
 
 export default function Products() {
+  const navigate = useNavigate();
+
   return (
     <div className="products-container">
 
@@ -55,7 +63,12 @@ export default function Products() {
 
             <h3>{item.name}</h3>
 
-            <button className="view-btn">View</button>
+            <button
+              className="view-btn"
+              onClick={() => navigate(item.route)}
+            >
+              View
+            </button>
           </div>
         ))}
       </div>
@@ -65,9 +78,11 @@ export default function Products() {
         <div className="help-text">
           <h2>Need Help?</h2>
           <p>Call us today and our hearing experts will assist you.</p>
-          <h3>📞 981-3573993</h3>
+          <h3>📞 9845192771</h3>
 
-          <a href="/contact" className="contact-btn">Contact Us</a>
+          <a href="/contact" className="contact-btn">
+            Contact Us
+          </a>
         </div>
 
         <img src={contactImg} alt="help" className="help-img" />

@@ -24,6 +24,9 @@
 .services-page {
   margin-top: 0 !important;
   padding-top: 0 !important;
+  font-family: "Poppins", "Segoe UI", sans-serif;
+  scroll-behavior: smooth;
+  background: #fff8f2;
 }
 
 /* =========================================
@@ -70,7 +73,7 @@
 }
 
 /* =========================================
-   INTRO SECTION (FIXED)
+   INTRO SECTION
 ========================================= */
 .services-intro {
   width: 70%;
@@ -80,8 +83,6 @@
   color: #333;
   line-height: 1.75;
   animation: fadeSlideUp 1s ease-out;
-
-  /* FIX: Prevent intro from disappearing */
   opacity: 1 !important;
   transform: none !important;
 }
@@ -166,6 +167,8 @@
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
   box-shadow: 0 -5px 25px rgba(0,0,0,0.15);
+  flex-wrap: wrap;
+  gap: 30px;
 }
 
 .help-text h3 {
@@ -197,7 +200,6 @@
   transform: scale(1.08);
 }
 
-/* Help Image */
 .help-img {
   width: 300px;
   border-radius: 14px;
@@ -209,10 +211,19 @@
    RESPONSIVE
 ========================================= */
 @media (max-width: 950px) {
-  .service-item {
+  /* Stack service items vertically */
+  .service-item,
+  .service-item.reverse {
     flex-direction: column;
     text-align: center;
     margin: 50px 0;
+  }
+
+  /* Images on top */
+  .service-item img {
+    width: 85%;
+    max-width: 320px;
+    margin-bottom: 20px;
   }
 
   .service-content {
@@ -243,5 +254,9 @@
 
   .service-content h2 {
     font-size: 22px;
+  }
+
+  .service-content p {
+    font-size: 16px;
   }
 }

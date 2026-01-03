@@ -2,202 +2,289 @@ import React, { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import "../styles/home.css";
 
-export default function Home() {
-  // ------------------- SCROLL ANIMATIONS -------------------
+/* ===== IMPORT LOCAL IMAGES ===== */
+
+// Product images
+import RIC from "../assets/home/RIC.png";
+import ITE from "../assets/home/ITE.png";
+import IIC from "../assets/home/IIC.png";
+import CIC from "../assets/home/CIC.png";
+import BTE from "../assets/home/BTE.png";
+
+// Brand logos
+import Brand1 from "../assets/home/brand1.jpg";
+import Brand2 from "../assets/home/brand2.jpg";
+import Brand3 from "../assets/home/brand3.jpg";
+import Brand4 from "../assets/home/brand4.jpg";
+import Brand5 from "../assets/home/brand5.jpg";
+import Brand6 from "../assets/home/brand6.jpg";
+
+// Hero image
+import HeroImg from "../assets/home/home.jpg";
+
+// Service images
+import HearingTestImg from "../assets/home/hearingtest.jpg";
+import SpeechTherapyImg from "../assets/home/SpeechTherapy.jfif";
+import DigitalAidImg from "../assets/home/digitalhearingaids.jpg";
+
+/* ===== SWIPER ===== */
+/* ===== SWIPER ===== */
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import { Pagination, Navigation, Autoplay } from "swiper/modules";
+
+
+const Home = () => {
   useEffect(() => {
+    const elements = document.querySelectorAll(
+      ".fade-in, .slide-left, .slide-right"
+    );
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
           }
         });
       },
       { threshold: 0.2 }
     );
 
-    document
-      .querySelectorAll(".fade-in, .slide-left, .slide-right")
-      .forEach((el) => observer.observe(el));
+    elements.forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
   }, []);
 
+  const testimonialData = [
+    {
+      text: "Amazing service! My father can hear clearly again.",
+      author: "Patient A",
+    },
+    {
+      text: "Professional staff and excellent care.",
+      author: "Patient B",
+    },
+    {
+      text: "Highly recommended hearing care center in Nepal.",
+      author: "Patient C",
+    },
+  ];
+
   return (
-    <div className="home">
-      {/* =================== HERO SECTION (STATIC) =================== */}
+    <main className="home">
+      {/* ================= HERO ================= */}
       <section className="hero-static">
-        <div className="hero-content">
+        <div className="hero-content container">
           <div className="hero-left fade-in">
             <span className="hero-tag">WELCOME TO AAWAZ</span>
-            <h1>The best hearing aid in Nepal</h1>
+            <h1>Leading Hearing Aid Center in Nepal</h1>
             <p>
-              You’ve come to the right place. Aawaz Speech & Hearing Center
-              offers advanced hearing solutions to help you hear and live
-              better.
+              Aawaz Speech & Hearing Care Center provides advanced hearing and
+              speech solutions designed to help you hear better and live better.
             </p>
 
             <div className="hero-actions">
-              <NavLink to="/products">
-                <button className="btn-primary"> View Product</button>
+              <NavLink to="/products" className="btn-primary">
+                View Products
               </NavLink>
-              <NavLink to="/appointment">
-                <button className="btn-outline">Book Appointment</button>
+              <NavLink to="/appointment" className="btn-outline">
+                Book Appointment
               </NavLink>
             </div>
           </div>
 
-          <div className="hero-right slide-right">
+          <div
+            style={{
+              overflow: "hidden",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
             <img
-              src="/mnt/data/h.PNG"
-              alt="Hearing Aid User"
-              className="hero-image"
+              src={HeroImg}
+              alt="Hearing Aid"
+              style={{
+                width: "100%",
+                maxWidth: "500px",
+                borderRadius: "20px",
+                boxShadow: "0 20px 40px rgba(0,0,0,0.2)",
+                transform: "translateY(50px)",
+                opacity: 0,
+                animation: "slideFadeIn 1s ease-out forwards",
+              }}
             />
+            <style>
+              {`
+      @keyframes slideFadeIn {
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+    `}
+            </style>
           </div>
         </div>
       </section>
 
-      {/* =================== WELCOME =================== */}
+      {/* ================= WELCOME ================= */}
       <section className="section section-light fade-in">
-        <h2>Welcome to Aawaz Hearing & Speech Care Center</h2>
-        <p>
-          Your hearing and speech health is our top priority. Explore our
-          services to learn how we can help you or your loved ones improve
-          communication, address hearing concerns, and enhance overall auditory
-          wellness. Our team of experts provides personalized care, guidance,
-          and support for every stage of life.
-        </p>
-        <p>
-          From hearing assessments to speech therapy, tinnitus management, and
-          hearing aid fittings, we are here to ensure you receive the best
-          possible care with compassion and expertise.
-        </p>
+        <div className="container">
+          <h2>Welcome to Aawaz Hearing & Speech Care Center</h2>
+          <p>
+            Your hearing and speech health are our highest priority. We provide
+            personalized care using modern technology and expert audiologists.
+          </p>
+        </div>
       </section>
-      {/* =================== PRODUCTS =================== */}
+
+      {/* ================= PRODUCTS ================= */}
       <section className="section section-grey">
-        <h2 className="slide-right">Top Hearing Aid Products</h2>
+        <div className="container">
+          <h2 className="slide-right">Top Hearing Aid Types</h2>
 
-        <div className="product-logos fade-in">
-          {/* Product 1: Receiver-In-Canal (RIC) */}
-          <div className="product-card">
-            <h4>Receiver-In-Canal (RIC)</h4>
-            <img src="/assets/product/ric.jpg" alt="RIC" />
-            <button className="view-btn">View</button>
-          </div>
-
-          {/* Product 2: In-The-Ear (ITE) */}
-          <div className="product-card">
-            <h4>In-The-Ear (ITE)</h4>
-            <img src="/assets/product/ite.jpg" alt="ITE" />
-            <button className="view-btn">View</button>
-          </div>
-
-          {/* Product 3: Invisible-In-Canal (IIC) */}
-          <div className="product-card">
-            <h4>Invisible-In-Canal (IIC)</h4>
-            <img src="/assets/product/iic.jpg" alt="IIC" />
-            <button className="view-btn">View</button>
-          </div>
-
-          {/* Product 4: Completely-In-Canal (CIC) */}
-          <div className="product-card">
-            <h4>Completely-In-Canal (CIC)</h4>
-            <img src="/assets/product/cic.jpg" alt="CIC" />
-            <button className="view-btn">View</button>
-          </div>
-
-          {/* Product 5: Behind-The-Ear (BTE) */}
-          <div className="product-card">
-            <h4>Behind-The-Ear (BTE)</h4>
-            <img src="/assets/product/bte.jpg" alt="BTE" />
-            <button className="view-btn">View</button>
+          <div className="product-logos fade-in">
+            {[RIC, ITE, IIC, CIC, BTE].map((img, i) => {
+              const names = [
+                "Receiver-In-Canal (RIC)",
+                "In-The-Ear (ITE)",
+                "Invisible-In-Canal (IIC)",
+                "Completely-In-Canal (CIC)",
+                "Behind-The-Ear (BTE)",
+              ];
+              return (
+                <article className="product-card" key={names[i]}>
+                  <img src={img} alt={names[i]} />
+                  <h4>{names[i]}</h4>
+                  <NavLink to="/products" className="view-btn">
+                    View Details
+                  </NavLink>
+                </article>
+              );
+            })}
           </div>
         </div>
       </section>
-      {/* =================== SERVICES =================== */}
+
+      {/* ================= SERVICES ================= */}
       <section className="section section-white">
-        <h2 className="slide-left">Our Key Services</h2>
+        <div className="container">
+          <h2 className="slide-left">Our Key Services</h2>
 
-        <div className="service-grid fade-in">
-          <div className="service-card">
-            <img
-              src="https://images.pexels.com/photos/7578800/pexels-photo-7578800.jpeg"
-              alt="Hearing Test"
+          <div className="service-grid fade-in">
+            <ServiceCard
+              title="Hearing Test"
+              desc="Comprehensive diagnostic hearing evaluations."
+              img={HearingTestImg}
             />
-            <h3>Hearing Test</h3>
-            <p>Complete diagnostic hearing evaluation.</p>
-          </div>
-
-          <div className="service-card">
-            <img
-              src="https://images.pexels.com/photos/4101140/pexels-photo-4101140.jpeg"
-              alt="Speech Therapy"
+            <ServiceCard
+              title="Speech Therapy"
+              desc="Personalized speech & language therapy."
+              img={SpeechTherapyImg}
             />
-            <h3>Speech Therapy</h3>
-            <p>Specialized speech & language services for all ages.</p>
-          </div>
-
-          <div className="service-card">
-            <img
-              src="https://images.pexels.com/photos/8376231/pexels-photo-8376231.jpeg"
-              alt="Digital Hearing Aids"
+            <ServiceCard
+              title="Digital Hearing Aids"
+              desc="Latest digital hearing aids from top brands."
+              img={DigitalAidImg}
             />
-            <h3>Digital Hearing Aids</h3>
-            <p>Top brands with latest digital features.</p>
           </div>
         </div>
       </section>
 
-      {/* =================== BRANDS =================== */}
+      {/* ================= BRANDS ================= */}
       <section className="section section-grey">
-        <h2 className="slide-right">Top Hearing Aid Brands</h2>
+        <div className="container">
+          <h2 className="slide-right">Trusted Hearing Aid Brands</h2>
 
-        <div className="brand-logos fade-in">
-          <img
-            src="https://via.placeholder.com/120x50?text=Brand+1"
-            alt="Brand 1"
-          />
-          <img
-            src="https://via.placeholder.com/120x50?text=Brand+2"
-            alt="Brand 2"
-          />
-          <img
-            src="https://via.placeholder.com/120x50?text=Brand+3"
-            alt="Brand 3"
-          />
-          <img
-            src="https://via.placeholder.com/120x50?text=Brand+4"
-            alt="Brand 4"
-          />
+          <div className="brand-logos fade-in">
+            {[Brand1, Brand2, Brand3, Brand4, Brand5, Brand6].map(
+              (brand, index) => (
+                <img key={index} src={brand} alt={`Brand ${index + 1}`} />
+              )
+            )}
+          </div>
         </div>
       </section>
 
-      {/* =================== TESTIMONIALS =================== */}
+      {/* ================= TESTIMONIAL SLIDER ================= */}
       <section className="section section-cream">
-        <h2 className="fade-in">What Our Patients Say</h2>
+  <div className="container">
+    <h2 className="fade-in">What Our Patients Say</h2>
 
-        <div className="testimonial-grid">
-          <div className="testimonial-card slide-left">
-            <p>“Amazing service! My father can hear clearly again.”</p>
-            <h4>— Patient A</h4>
-          </div>
+    <Swiper
+      modules={[Pagination, Navigation, Autoplay]}
+      spaceBetween={32}
+      slidesPerView={1}
+      loop={true}
+      pagination={{ clickable: true }}
+      navigation
+      autoplay={{ delay: 5000, disableOnInteraction: false }}
+      style={{ "--swiper-navigation-color": "#FF6600", "--swiper-pagination-color": "#FF6600" }} // Orange color
+    >
+      {testimonialData.map((item, index) => (
+        <SwiperSlide key={index}>
+          <blockquote
+            style={{
+              background: "#fff",
+              padding: "32px",
+              borderRadius: "16px",
+              borderLeft: "5px solid #FF6600", // Orange border
+              boxShadow: "0 12px 24px rgba(0,0,0,0.08)",
+              transform: "translateY(30px) scale(0.95)",
+              opacity: 0,
+              animation: "fadeSlideIn 0.8s cubic-bezier(0.22,1,0.36,1) forwards",
+              maxWidth: "720px",
+              margin: "auto",
+            }}
+          >
+            <p style={{ fontSize: "1.125rem", lineHeight: 1.6, color: "#333", marginBottom: "18px" }}>
+              “{item.text}”
+            </p>
+            <footer style={{ fontWeight: 700, color: "#FF6600", fontSize: "1rem" }}>
+              — {item.author}
+            </footer>
+          </blockquote>
+        </SwiperSlide>
+      ))}
+    </Swiper>
 
-          <div className="testimonial-card slide-right">
-            <p>“Professional staff and excellent care.”</p>
-            <h4>— Patient B</h4>
-          </div>
-        </div>
-      </section>
+    <style>
+      {`
+        @keyframes fadeSlideIn {
+          0% { transform: translateY(30px) scale(0.95); opacity: 0; }
+          60% { transform: translateY(-10px) scale(1.02); opacity: 1; }
+          100% { transform: translateY(0) scale(1); opacity: 1; }
+        }
+      `}
+    </style>
+  </div>
+</section>
 
-      {/* =================== CONTACT CTA =================== */}
+      {/* ================= CTA ================= */}
       <section className="section section-light fade-in">
-        <h2>Need Help With Hearing?</h2>
-        <p>Contact us for evaluations, treatment and expert advice.</p>
+        <div className="container">
+          <h2>Need Help With Your Hearing?</h2>
+          <p>Contact us today for expert evaluation and personalized care.</p>
 
-        <div className="cta-actions">
-          <NavLink to="/contact">
-            <button className="btn-primary">Contact Us</button>
+          <NavLink to="/contact" className="btn-primary">
+            Contact Us
           </NavLink>
         </div>
       </section>
-    </div>
+    </main>
   );
-}
+};
+
+const ServiceCard = ({ title, desc, img }) => (
+  <article className="service-card">
+    <img src={img} alt={title} />
+    <h3>{title}</h3>
+    <p>{desc}</p>
+  </article>
+);
+
+export default Home;

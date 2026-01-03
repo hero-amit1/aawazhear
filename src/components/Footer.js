@@ -45,13 +45,13 @@ export default function Footer() {
           <h3 className="footer-heading">Follow Us</h3>
 
           <div className="footer-social">
-            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.facebook.com/aawazhearing/" target="_blank" rel="noopener noreferrer">
               <FaFacebook className="footer-icon" size={28} />
             </a>
-            <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.google.com/maps/dir/27.705344,84.4131412/aawaz+speech+and+hearing+clinic" >
               <FaGoogle className="footer-icon" size={28} />
             </a>
-            <a href="https://wa.me/9779800000000" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/9779845192771" target="_blank" rel="noopener noreferrer">
               <FaWhatsapp className="footer-icon" size={28} />
             </a>
           </div>
@@ -59,15 +59,15 @@ export default function Footer() {
           <h3 className="footer-heading contact-title">Contact</h3>
 
           <p className="footer-contact">
-            <HiOutlineLocationMarker size={18} /> Chitwan, Nepal
+            <HiOutlineLocationMarker size={18} /> Bharatpur-10, Hospital Road Chitwan
           </p>
 
           <p className="footer-contact">
-            <FaPhoneAlt size={18} /> +977 9800000000
+            <FaPhoneAlt size={18} /> +977 9845192771
           </p>
 
           <p className="footer-contact">
-            <HiOutlineMail size={18} /> aawazhearing@gmail.com
+            <HiOutlineMail size={18} /> aawazclinic42@gmail.com
           </p>
         </div>
       </div>
