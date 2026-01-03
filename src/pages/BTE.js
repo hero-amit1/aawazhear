@@ -15,7 +15,6 @@ import { Link } from "react-router-dom"; // for navigation
 const BTE = () => {
   return (
     <div className="page">
-
       {/* Header */}
       <header className="header">
         <h1>Our Products</h1>
@@ -37,7 +36,15 @@ const BTE = () => {
             <li>Durable and easy to maintain</li>
           </ul>
 
-          <button className="primary-btn">How to Order</button>
+          <button className="primary-btn">
+            Essential range <br></br>RS 18,000 - RS 45,000
+          </button>
+          <button className="primary-btn">
+            Mid range <br></br>RS 45,000 - RS 1,50,000
+          </button>
+          <button className="primary-btn">
+            Premium and Rechargeable <br></br>RS 70,000 - RS 8,00,000
+          </button>
         </div>
       </section>
 
@@ -74,18 +81,13 @@ const BTE = () => {
           <h3>Need Help?</h3>
           <p>Call us</p>
           <span className="phone">📞 981-3379393</span>
-           <NavLink to="/contact" className="btn-primary">
+          <NavLink to="/contact" className="btn-primary">
             Contact Us
           </NavLink>
         </div>
 
-        <img
-          src={HelpImg}
-          alt="Hearing Aid Support"
-          className="help-image"
-        />
+        <img src={HelpImg} alt="Hearing Aid Support" className="help-image" />
       </section>
-
     </div>
   );
 };

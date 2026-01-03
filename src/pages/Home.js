@@ -61,15 +61,15 @@ const Home = () => {
   const testimonialData = [
     {
       text: "Amazing service! My father can hear clearly again.",
-      author: "Patient A",
+      author: "Ram chandra Poudel",
     },
     {
-      text: "Professional staff and excellent care.",
-      author: "Patient B",
+      text: "Professional staff and excellent care.",                          
+      author: "Sita bhandari",
     },
     {
       text: "Highly recommended hearing care center in Nepal.",
-      author: "Patient C",
+      author: "Akash gupta",
     },
   ];
 

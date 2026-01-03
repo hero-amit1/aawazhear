@@ -145,6 +145,8 @@ h1, h2, h3, h4 {
   font-weight: 600;
   box-shadow: 0 8px 18px rgba(230,57,70,0.25);
   transition: all 0.3s ease;
+   margin-left: 20px;
+   margin-bottom: 20px; 
 }
 
 .primary-btn:hover {

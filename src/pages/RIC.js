@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import "../styles/RIC.css"; 
+import "../styles/RIC.css";
 
 /* ===== IMPORT LOCAL IMAGES ===== */
 import RICImg from "../assets/product/RIC.png";
@@ -13,7 +13,6 @@ import HelpImg from "../assets/product/help.jfif"; // make sure this exists
 const RIC = () => {
   return (
     <div className="page">
-
       {/* Header */}
       <header className="header">
         <h1>Our Products</h1>
@@ -35,7 +34,15 @@ const RIC = () => {
             <li>Battery lasts up to 5 days</li>
           </ul>
 
-          <button className="primary-btn">How to Order</button>
+          <button className="primary-btn">
+            Essential range <br></br>RS 18,000 - RS 50,000
+          </button>
+          <button className="primary-btn">
+            Mid range <br></br>RS 50,000 - RS 1,20,000
+          </button>
+          <button className="primary-btn">
+            Premium and Rechargeable <br></br>RS 70,000 - RS 8,00,000
+          </button>
         </div>
       </section>
 
@@ -72,18 +79,13 @@ const RIC = () => {
           <h3>Need Help?</h3>
           <p>Call us</p>
           <span className="phone">📞 981-3379393</span>
-           <NavLink to="/contact" className="btn-primary">
-                      Contact Us
-                    </NavLink>
+          <NavLink to="/contact" className="btn-primary">
+            Contact Us
+          </NavLink>
         </div>
 
-        <img
-          src={HelpImg}
-          alt="Hearing Aid Support"
-          className="help-image"
-        />
+        <img src={HelpImg} alt="Hearing Aid Support" className="help-image" />
       </section>
-
     </div>
   );
 };
