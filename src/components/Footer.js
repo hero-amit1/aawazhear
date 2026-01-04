@@ -73,7 +73,7 @@ export default function Footer() {
       </div>
 
       <div className="footer-copyright">
-        © Aawaz Speech and Hearing Center {new Date().getFullYear()}
+        © Aawaz Hearing and Speech Care Center {new Date().getFullYear()}
       </div>
     </footer>
   );

@@ -82,7 +82,7 @@ const Home = () => {
             <span className="hero-tag">WELCOME TO AAWAZ</span>
             <h1>Leading Hearing Aid Center in Nepal</h1>
             <p>
-              Aawaz Speech & Hearing Care Center provides advanced hearing and
+              Aawaz Hearing & Speech Care Center provides advanced hearing and
               speech solutions designed to help you hear better and live better.
             </p>
 

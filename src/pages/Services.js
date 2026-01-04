@@ -61,7 +61,7 @@ export default function Services() {
             <h2>PTA Test (Diagnostic Audiometer)</h2>
             <p>
               The Pure Tone Audiometry (PTA) test is a key diagnostic tool used
-              at Aawaj Hearing and Speech Center to assess hearing sensitivity.
+              at Aawaz Hearing and Speech Care Center to assess hearing sensitivity.
               This test helps us determine the softest sounds you can hear at
               various pitches. Our experienced audiologists use advanced
               diagnostic audiometers to ensure accurate results, which guide us
@@ -80,7 +80,7 @@ export default function Services() {
             <h2>Tympanometry & Stapedius Reflex Test</h2>
             <p>
               Tympanometry and Stapedius Reflex testing are essential diagnostic
-              tools used at Aawaj Hearing and Speech Center to assess middle ear
+              tools used at Aawaz Hearing and Speech Care Center to assess middle ear
               function. Tympanometry measures the movement of the eardrum in
               response to changes in air pressure, while the Stapedius Reflex
               Test evaluates the reflexes of the middle ear muscles. These tests
@@ -106,7 +106,7 @@ export default function Services() {
           <div className="service-content">
             <h2>Comprehensive Hearing Tests</h2>
             <p>
-              At Aawaj Hearing and Speech Center, we offer a wide range of
+              At Aawaz Hearing and Speech Care Center, we offer a wide range of
               hearing tests designed to assess and enhance your auditory health.
               Our state-of-the-art facilities and expert audiologists are here
               to provide you with a comfortable and accurate hearing assessment.
@@ -125,7 +125,7 @@ export default function Services() {
           <div className="service-content">
             <h2>Speech & Language Therapy</h2>
             <p>
-              At Aawaj Hearing and Speech Center, we offer comprehensive speech
+              At Aawaz Hearing and Speech Care Center, we offer comprehensive speech
               and language therapy services to help individuals of all ages
               improve their communication skills. Our licensed speech-language
               pathologists provide personalized assessments and tailored
@@ -151,7 +151,7 @@ export default function Services() {
             <h2>Tinnitus Retraining Therapy (TRT)</h2>
             <p>
               Tinnitus Retraining Therapy (TRT) is an evidence-based treatment
-              offered at Aawaj Hearing and Speech Center to help individuals
+              offered at Aawaz Hearing and Speech Care Center to help individuals
               manage tinnitus. This therapy aims to retrain the brain to
               perceive tinnitus sounds as neutral, reducing their impact on
               daily life. Our TRT program combines sound therapy and counseling
@@ -171,7 +171,7 @@ export default function Services() {
           <div className="service-content">
             <h2>Hearing Aid Trials & Fittings</h2>
             <p>
-              At Aawaj Hearing and Speech Center, we understand that choosing
+              At Aawaz Hearing and Speech Care Center, we understand that choosing
               the right hearing aid is a significant decision. That's why we
               offer comprehensive hearing aid trials and fittings to ensure that
               you find the perfect solution for your hearing needs. Our
@@ -197,7 +197,7 @@ export default function Services() {
             <h2>Otoacoustic Emissions (OAE)</h2>
             <p>
               Otoacoustic Emissions (OAE) testing is a crucial tool used at
-              Aawaj Hearing and Speech Center to evaluate the function of the
+              Aawaz Hearing and Speech Care Center to evaluate the function of the
               inner ear, specifically the cochlea. This non-invasive test helps
               detect hearing loss in individuals of all ages, including newborns
               and young children who may not be able to communicate their
@@ -219,7 +219,7 @@ export default function Services() {
             <h2>Auditory Brainstem Response (ABR)</h2>
             <p>
               The Auditory Brainstem Response (ABR) test is a reliable
-              diagnostic tool offered at Aawaj Hearing and Speech Center. This
+              diagnostic tool offered at Aawaz Hearing and Speech Care Center. This
               test measures the brain's response to sounds and is used to assess
               hearing and neurological function, especially in individuals who
               cannot undergo standard hearing tests. ABR testing is non-invasive

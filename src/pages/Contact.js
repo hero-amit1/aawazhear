@@ -206,7 +206,7 @@ ${form.message}
             {/* Opening Hours */}
             <div className="contact-hours">
               <FaClock /> <h4>Opening Hours</h4>
-              <p>Sun - Fri: 9 AM - 6 PM</p>
+              <p>Sun - Fri: 8 AM - 7 PM</p>
               <p>Saturday: Closed</p>
             </div>
 

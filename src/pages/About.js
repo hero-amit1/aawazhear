@@ -15,7 +15,7 @@ import contactImg from "../assets/service/contact.jpg";
 // About Section Images
 import whoweareImg from "../assets/about/whoweare.jpg";
 import doctorImg from "../assets/about/doctor.jpeg";
-import hearingAidsImg from "../assets/about/HearingAids.webp";
+import hearingAidsImg from "../assets/about/hearingaids.jpg";
 import hearingAssessmentsImg from "../assets/about/HearingAssessments.webp";
 import speechTherapyImg from "../assets/about/SpeechTherapy.jfif";
 
@@ -86,7 +86,7 @@ export default function About() {
             challenges.
           </p>
           <p>
-            At Aawaz Hearing and Speech Center, we’re more than just a service
+            At Aawaz Hearing and Speech Care Center, we’re more than just a service
             provider; we’re part of a movement toward a future where everyone
             can be heard and understood. Thank you for choosing Aawaj as your
             partner in communication and connection. Together, we’re breaking
@@ -145,7 +145,7 @@ export default function About() {
                   degree in Audiology and Speech Language Pathology from M.V
                   Shetty College of Speech and Hearing, Mangalore University. He
                   is currently working as assistant professor at Chitwan Medical
-                  College. He has served as the clinical Director of Aawaj
+                  College. He has served as the clinical Director of Aawaz
                   hearing and speech care center Bharatpur 10, Chitwan.
                 </p>
               </div>
